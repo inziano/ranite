@@ -1,0 +1,33 @@
+columns:
+    vehicle_registration:
+        label: Registration
+        type: text
+        searchable: false
+    year_of_manufacture:
+        label: Y.O.M
+        type: date
+        searchable: true
+        sortable: true
+    engine_rating:
+        label: 'engine rating'
+        type: number
+        sortable: true
+    vehicle_make:
+        label: Model
+        type: text
+        searchable: true
+        sortable: true
+    vehicle_color:
+        label: Color
+        type: colorpicker
+    seating_capacity:
+        label: 'Seating Capacity'
+        type: number
+    price_per_day:
+        label: Price
+        type: number
+        searchable: true
+    owner:
+        label: Owner
+        type: text
+        searchable: true

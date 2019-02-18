@@ -1,0 +1,24 @@
+columns:
+    national_id:
+        label: 'National ID'
+        type: number
+        sortable: true
+    first_name:
+        label: 'First Name'
+        type: text
+        searchable: true
+    last_name:
+        label: 'Last Name'
+        type: text
+        searchable: true
+    phone_number:
+        label: Phone
+        type: number
+    email:
+        label: Email
+        type: text
+        searchable: true
+    gender:
+        label: Gender
+        type: text
+        sortable: true

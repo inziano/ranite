@@ -1,0 +1,11 @@
+name: Owners
+modelClass: Ranite\Chauffeur\Models\Owner
+form: $/ranite/chauffeur/models/owner/fields.yaml
+defaultRedirect: ranite/chauffeur/owners
+create:
+    redirect: 'ranite/chauffeur/owners/update/:id'
+    redirectClose: ranite/chauffeur/owners
+update:
+    redirect: ranite/chauffeur/owners
+    redirectClose: ranite/chauffeur/owners
+preview: {  }

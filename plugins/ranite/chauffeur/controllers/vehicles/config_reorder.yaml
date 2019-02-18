@@ -1,0 +1,5 @@
+title: Vehicles
+modelClass: Ranite\Chauffeur\Models\Vehicle
+nameFrom: vehicle_registration
+toolbar:
+    buttons: reorder_toolbar

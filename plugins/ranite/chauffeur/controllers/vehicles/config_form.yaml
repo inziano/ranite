@@ -1,0 +1,11 @@
+name: Vehicles
+modelClass: Ranite\Chauffeur\Models\Vehicle
+form: $/ranite/chauffeur/models/vehicle/fields.yaml
+defaultRedirect: ranite/chauffeur/vehicles
+create:
+    redirect: 'ranite/chauffeur/vehicles/update/:id'
+    redirectClose: ranite/chauffeur/vehicles
+update:
+    redirect: ranite/chauffeur/vehicles
+    redirectClose: ranite/chauffeur/vehicles
+preview: {  }

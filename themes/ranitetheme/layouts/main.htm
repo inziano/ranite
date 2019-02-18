@@ -1,0 +1,192 @@
+description = "Main website layout"
+==
+<?php
+// Inject css to the layout
+ 
+ function onStart () {
+     
+     //Add stylesheet from assets
+     $this->addCss(['assets/stylesheets/normalize.css','assets/stylesheets/grid.css','assets/stylesheets/main.css']);
+     
+     //Add Js
+     $this->addJs(['assets/js/main.js']);
+ }
+?>
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Ranite : Car Hire </title>
+
+        <!-- Site description -->
+        <meta name="description" content="">
+
+        <!-- Define a viewport to mobile devices to use - telling the browser to assume that the page is as wide as the device (width=device-width,
+        and setting the initial page zoom level to be 1 (initial-scale=1.0), and fixing width=device-width for iOS9 (shtink-to-fit=no) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <!-- Add normalize.css which enables browsers to render all elements more consistently and in line with modern standards as it only targets particular styles that need normalizing -->
+    
+        <!-- Skeleton css provides grid system -->
+       
+        <!-- Main stylesheet -->
+        
+        {%styles%}
+        
+        <!-- Jquery -->
+        <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+
+        
+        {%scripts%}
+
+        <!-- Font awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+        
+        <!-- Google analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134080358-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-134080358-1');
+        </script>
+        
+        {% framework %}
+    </head>
+
+    <body>
+         <div id="overlay-menu" class="close">
+           <div class="container">
+                <div class="row">
+                    <section id="overlay-nav" class="">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                    
+                    <section id="overlay-contact" class="">
+                        <div id="contact-details" class="">
+                            <h3> Contact Us </h3>
+                            <p> Email : ranite@gmail.com </p>
+                            <p> Phone : 0712345678 </p>
+                        </div>
+                    </section>
+                </div>
+           </div>
+        </div>
+
+        <div id="main" class="container-fluid">
+            <div id="top-bar" class="row">
+                    <div id="logo" class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <p> 
+                            R 
+                            <span>
+                                Ranite Limited
+                            </span>
+                        </p>
+                        
+                    </div>
+                    <div class="col-6 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                        <div id="social-icons">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" ham col-2 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                        <div id="hamburger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+    
+            </div>
+
+            <div id="content">
+            
+               {% page %}
+             
+                <!-- Footer -->
+                <footer class="row">
+                    <div class="col-xl-12 row">
+                        <div id="footer-nav" class="col-xl-4">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="{{'home'|page}}">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li> About </li>
+                                    <li> Services </li>
+                                    <li> Contact </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="footer-contact" class="col-xl-4">
+                            <div>
+                                <p> Contact </p>
+                                <p>
+                                    +254 712345678
+                                </p>
+                                
+                                <p>
+                                  ranite@gmail.com
+                                </p>
+                                
+                            </div>
+
+                        </div>
+                        <div class="col-xl-4">
+
+                        </div>
+                    </div>
+                    <div class="col-xl-12 row">
+                        <div id="built-by" class="col-xl-12">
+                            <p>
+                                    <span>
+                                        Icons : <a href="https://icons8.com/icons"><b>Icons8</b></a>
+                                    </span>
+                            </p>
+                            <p>
+                                <span> Site built by <b>inziano</b></span>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

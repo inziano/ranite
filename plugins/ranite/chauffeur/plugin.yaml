@@ -1,0 +1,32 @@
+plugin:
+    name: 'ranite.chauffeur::lang.plugin.name'
+    description: 'ranite.chauffeur::lang.plugin.description'
+    author: Ranite
+    icon: oc-icon-car
+    homepage: ''
+navigation:
+    chauffeur:
+        label: 'ranite.chauffeur::lang.plugin.name'
+        url: ranite/chauffeur/vehicles
+        icon: icon-car
+        permissions: {  }
+        sideMenu:
+            vehicles:
+                label: Vehicles
+                url: ranite/chauffeur/vehicles
+                icon: icon-cab
+                permissions:
+                    - ranite.chauffeur.manage_vehicles
+            owner:
+                label: Owner
+                url: ranite/chauffeur/owners
+                icon: icon-user
+                permissions:
+                    - ranite.chauffeur.manage_owners
+permissions:
+    ranite.chauffeur.manage_vehicles:
+        tab: 'Manage Vehicles'
+        label: 'Manage Vehicles'
+    'ranite.chauffeur.manage_owners ':
+        tab: 'Manage Owners'
+        label: 'Manage Owners'

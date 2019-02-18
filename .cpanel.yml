@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    -composer install
+    -php artisan october:install
+    -php artisan october:up

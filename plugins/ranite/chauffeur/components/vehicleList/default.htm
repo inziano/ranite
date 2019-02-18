@@ -1,0 +1,34 @@
+{% set Vehicles = __SELF__.allVehicles %}
+
+{% set detailsPage = __SELF__.detailsPage %}
+
+{% set detailsurl = __SELF__.detailsURL %}
+
+{% for vehicle in Vehicles %}
+
+<a href="{{ detailsPage|page ({ (detailsurl): vehicle.vehicle_registration }) }}" class="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-4 offset-1 offset-sm-1 offset-md-0 search-item">
+    <div class="image-holder">
+        <img src="{{ vehicle.vehicle_image | media }}">
+        <div class="image-details">
+            <p>
+                <span>
+                    Kes.
+                </span>
+                <span>
+                    {{ vehicle.price_per_day }}
+                </span>
+            </p>
+        </div>
+    </div>
+</a>   
+
+{% endfor %}
+
+<div id="pagination" class="col-12 d-flex justify-content-center">
+    <a href="{{Vehicles.previousPageUrl()}}">
+        &#8592; prev 
+    </a>
+    <a href="{{Vehicles.nextPageUrl()}}">
+        next &#8594;
+    </a>
+</div>

@@ -1,0 +1,20 @@
+
+  {% for vehicle in Vehicles %}
+
+  <a href="{{ detailsPage|page ({ (detailsurl): vehicle.vehicle_registration }) }}" class="col-12 col-sm-12 col-md-10 col-lg-4 col-xl-4 offset-md-2 offset-lg-0">
+      <div class="image-holder">
+          <img src="{{ vehicle.vehicle_image |media }}">
+          <div class="image-details">
+              <p>
+                  <span>
+                      Kes.
+                  </span>
+                  <span>
+                      {{ vehicle.price_per_day }}
+                  </span>
+              </p>
+          </div>
+      </div>
+  </a>  
+
+  {% endfor %}

@@ -1,0 +1,28 @@
+fields:
+    first_name:
+        label: 'First Name'
+        span: auto
+        type: text
+    last_name:
+        label: 'Last Name'
+        span: auto
+        type: text
+    national_id:
+        label: 'National ID'
+        span: auto
+        type: number
+    email:
+        label: Email
+        span: auto
+        type: text
+    phone_number:
+        label: 'Phone Number'
+        span: auto
+        type: number
+    gender:
+        label: Gender
+        options:
+            Female: Female
+            Male: Male
+        span: full
+        type: balloon-selector

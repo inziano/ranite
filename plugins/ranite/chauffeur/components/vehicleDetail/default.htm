@@ -1,0 +1,73 @@
+{% set Vehicle = __SELF__.singleVehicle %}
+
+
+{% for vehicle in Vehicle %}
+
+<section id="single" class="content-section row">
+        <div class="col-xl-8 offset-xl-0">
+            <div id="single-image">
+                <img src="{{ vehicle.vehicle_image |media }}">
+            </div>
+        </div>
+
+        <div class="col-xl-3">
+            <div id="image-details" class="row">
+
+                <div class="col-xl-12">
+                    <p>
+                       {{ vehicle.vehicle_make }}
+                    </p>
+                </div>
+
+                <div class="col-xl-4 dets">
+                    <p>
+                        <span><img src="https://img.icons8.com/small/24/000000/fill-color.png"></span>
+                        <span> {{ vehicle.vehicle_color }} </span>
+                    </p>
+                </div>
+
+                <div class="col-xl-4 dets">
+                    <p>
+                        <span><img src="https://img.icons8.com/ios/24/000000/passenger.png"></span>
+                        <span> {{ vehicle.seating_capacity }} </span>
+                    </p>
+                </div>
+
+                <div class="col-xl-4 dets">
+                    <p>
+                        <span><img src="https://img.icons8.com/small/24/000000/gas-station.png"></span>
+                        <span>  {{ vehicle.engine_rating }} </span>
+                    </p>
+                </div>
+
+                <div class="col-xl-12">
+                    <p>
+
+                      kes.  {{ vehicle.price_per_day }}
+                    </p>
+                </div>
+
+                <div class="col-xl-12">
+                    <div>
+                      <img src="{{ vehicle.vehicle_image |media }}">            
+                    </div>
+                    <div>
+                      <img src="{{ vehicle.vehicle_image |media }}">            
+                    </div>
+                    <div>
+                      <img src="{{ vehicle.vehicle_image |media }}">            
+                    </div>
+                </div>
+
+                <div class="col-xl-12">
+                    <button class="btn">
+                        Order
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+{% endfor %}

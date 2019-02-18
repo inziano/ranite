@@ -1,0 +1,32 @@
+<!-- {% set Vehicles = __SELF__.allVehicles %} -->
+
+{% set detailspage = __SELF__.detailsPage %}
+
+{% set detailsurl = __SELF__.detailsURL %}
+
+
+
+<div class="col-lg-0 col-xl-1">
+        <div class="slider-buttons">
+            <a href="{{Vehicles.previousPageUrl()}}">
+                &#8592;
+            </a>
+          
+        </div>
+</div>
+
+<div class="col-10 col-sm-10 col-md-10 col-lg-12 col-xl-10" >
+
+    <div id="top-cars-images" class="row">
+        {% partial __SELF__ ~'::top_cars' Vehicles = __SELF__.allVehicles detailspage = __SELF__.detailsPage detailsurl = __SELF__.detailsURL %}
+    </div>
+    
+</div>
+
+<div class="col-lg-0 col-xl-1">
+    <div class="slider-buttons">
+        <a href="{{Vehicles.nextPageUrl()}}" data-request-update="'{{ __SELF__ }}::top_cars': '#top-car-images'">
+            &#8594;
+        </a>
+    </div>
+</div>

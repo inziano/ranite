@@ -1,0 +1,74 @@
+fields:
+    vehicle_registration:
+        label: Registration
+        span: auto
+        placeholder: 'Registration Number'
+        required: 1
+        type: text
+        comment: 'Vehicle registration number'
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: vehicle_registration
+            type: slug
+        type: text
+    year_of_manufacture:
+        label: 'Year Of Manufacture'
+        mode: date
+        span: left
+        required: 1
+        type: datepicker
+        comment: 'Car year of manufacture'
+    vehicle_make:
+        label: 'Vehicle Make'
+        span: auto
+        required: 1
+        type: text
+        comment: 'Make of the vehicle'
+    vehicle_image:
+        label: 'Vehicle Image'
+        mode: image
+        span: full
+        type: mediafinder
+secondaryTabs:
+    fields:
+        seating_capacity:
+            label: 'Seating Capacity'
+            span: auto
+            placeholder: 'Seating Capacity'
+            default: '1'
+            required: 1
+            type: number
+            comment: 'Number of passengers vehicle can carry'
+            tab: Details
+        engine_rating:
+            label: 'Engine Rating'
+            span: auto
+            required: 1
+            type: number
+            comment: 'Engine capacity'
+            tab: Details
+        vehicle_color:
+            label: Color
+            span: auto
+            type: colorpicker
+            tab: Details
+        price_per_day:
+            label: 'Pricer Per Day'
+            span: auto
+            required: 1
+            type: number
+            comment: 'Amount charged per day for the vehicle'
+            tab: Details
+        available:
+            label: Available
+            span: full
+            default: 0
+            required: 1
+            attributes:
+                available: 'true'
+                un-available: 'false'
+            type: switch
+            comment: 'Vehicle Availability'
+            tab: Details
